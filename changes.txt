@@ -1,0 +1,5 @@
+- Ported monke dimensions to melonloader
+- Made monke dimensions use capuchin logic
+- Load assetbundles with a different system
+- Delete most of the custom components
+- Made shaders work for capuchin, thanks to @NoxGamesOfficial
