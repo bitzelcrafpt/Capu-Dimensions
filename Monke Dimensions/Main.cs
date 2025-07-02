@@ -86,24 +86,23 @@ namespace Capu_Dimensions
                 creditText.horizontalOverflow = HorizontalWrapMode.Overflow;
                 creditText.verticalOverflow = VerticalWrapMode.Overflow;
                 creditText.transform.localPosition = new Vector3(11.9108f, -67.3294f, -0.0007f);
+                StandMD.SetActive(false);
             }
 
         }
         void ModdedJoin()
         {
-            //string gamemode = e.Gamemode;
-            //inModded = gamemode.ToUpper().Contains("MODDED");
-            //StandMD.SetActive(inModded);
             StandMD.SetActive(true);
+            inModded = true;
+        }
+        void ModdedLeave()
+        {
+            StandMD.SetActive(false); inModded = false;
             if (DimensionManager.Instance.inDimension && !inModded)
             {
                 DimensionInstance.LoadSelectedDimension(DimensionInstance.dimensionNames[DimensionInstance.currentPage]);
                 TeleportDimension.ReturnToSpawn(DimensionInstance.currentDimensionPackage);
             }
-        }
-        void ModdedLeave()
-        {
-            StandMD.SetActive(false); inModded = true;
         }
         //internal Main()
         //{
