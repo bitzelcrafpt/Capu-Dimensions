@@ -40,8 +40,6 @@ internal class DimensionManager : MonoBehaviour
 
     public bool inDimension;
 
-    public GameObject Garfield;
-
 
     public GameObject LocalObjectsGameObject;
     void Start()
@@ -71,8 +69,6 @@ internal class DimensionManager : MonoBehaviour
     public void LoadDimensions()
     {
         LocalObjectsGameObject = GameObject.Find("Global/Levels");
-        Garfield = GameObject.Find("Garfield");
-        Garfield.SetActive(false);
 #if DEBUG
         MelonLogger.Msg("-> Found Dimension(s): <-");
 #endif
@@ -112,8 +108,8 @@ internal class DimensionManager : MonoBehaviour
     string description;
     string spawnpospath;
     string terminalpospath;
-    bool usePost;
-    bool useShader;
+    bool usePost = true;
+    bool useShader = true;
 
     private void LoadDimension(string dimensionFile)
     {

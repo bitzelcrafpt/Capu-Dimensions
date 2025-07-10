@@ -82,9 +82,6 @@ public class Button : MonoBehaviour
                         DimensionBrowser.instance.OnBrowserEnabled();
                         Comps.MainScreen.SetActive(false);
                         break;
-                    case ButtonType.Garfield:
-                        DimensionManager.Instance.Garfield.SetActive(true);
-                        break;
                 }
             }
         }
